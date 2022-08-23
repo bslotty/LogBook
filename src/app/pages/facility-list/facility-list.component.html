@@ -1,0 +1,20 @@
+<app-section-header [title]="title"
+    [buttons]="buttons"
+    (event)="headerEvent($event)">
+</app-section-header>
+
+<div *ngIf="facilities?.length > 0; else empty">
+
+
+    <div *ngFor="let f of facilities">
+        <app-facility-list-item [facility]="f"></app-facility-list-item>
+    </div>
+</div>
+
+
+
+<ng-template #empty>
+    <div class="alert alert-warn">
+        <label class="mat-body-2 alert-text">No facilities found</label>
+    </div>
+</ng-template>

@@ -1,0 +1,13 @@
+
+<div class="row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center align-items-center g-3">
+    <div *ngFor="let p of photos" class="col">
+        <div class="mat-elevation-z2 photo-container" (click)="openPhotoDiag(p)">
+            <div class="photo" [style.background]="'url(' + p.base64 + ') no-repeat center center'"></div>
+            <div class="photo-name px-2 py-1">
+                <label class="mat-body-1">{{ p.name }}</label>
+            </div>
+        </div>
+
+    </div>
+
+</div>

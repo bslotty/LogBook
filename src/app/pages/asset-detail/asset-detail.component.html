@@ -1,0 +1,45 @@
+<app-section-header title="Asset Details"
+    [buttons]="assetButtons"
+    (event)="headerEvent($event)">
+</app-section-header>
+
+<div class="d-flex align-items-start mb-5">
+    <div class="col px-2">
+        <form [formGroup]="assetForm">
+            <div class="mb-1" *ngFor="let control of assetControls">
+                <app-form-field  [field]="control"></app-form-field>
+            </div>
+        </form>
+
+    </div>
+    <div class="col px-2">
+        <div class="mb-1" *ngFor="let control of metricControls">
+            <app-form-field  [field]="control"></app-form-field>
+        </div>
+    </div>
+
+</div>
+
+<app-section-header title="Asset Photos"
+    [buttons]="photoButtons"
+    (event)="photoHeaderEvent($event)">
+</app-section-header>
+
+<input type="file" id="upload-input" multiple (change)="photoInputChange($event)"/>
+
+<div *ngIf="asset.photos?.length > 0; else empty">
+    <div class="d-flex align-items-center">
+        <div class="col">
+            <app-photo-list></app-photo-list>
+        </div>
+       
+    </div>
+    
+</div>
+
+
+<ng-template #empty>
+    <div class="alert alert-warn">
+        <label class="mat-body-2 alert-text">No photos found</label>
+    </div>
+</ng-template>

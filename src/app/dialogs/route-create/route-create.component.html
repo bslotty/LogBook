@@ -1,0 +1,19 @@
+<app-section-header [title]="title"
+    [buttons]="buttons"
+    (event)="headerEvent($event)">
+</app-section-header>
+
+<form [formGroup]="form">
+    <div class="mb-1" *ngFor="let control of controls">
+        <app-form-field  [field]="control"></app-form-field>
+    </div>
+</form>
+
+<hr class="mb-2">
+
+<div class="d-flex justify-content-end align-items-center">
+    <a mat-raised-button color="accent" (click)="create()" [disabled]="valid">
+        <label class="mat-button px-4 py-1">Create</label>
+    </a>
+
+</div>

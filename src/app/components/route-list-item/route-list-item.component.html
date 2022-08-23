@@ -1,0 +1,11 @@
+<div class="row justify-content-center align-items-center g-3 py-2">
+    <div class="col">
+        <label class="mat-subheading-1">{{ route.name }}</label>
+    </div>
+
+    <div class="col-auto">
+        <a mat-mini-fab [color]="link.buttonColor" (click)="view(route)" class="mat-elevation-z0" >
+            <app-icon [name]="link.iconName" [color]="link.iconColor"></app-icon>
+        </a>
+    </div>
+</div>

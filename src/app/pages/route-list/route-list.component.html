@@ -1,0 +1,18 @@
+<app-section-header [title]="facility.name" [buttons]="buttons" (event)="headerEvent($event)">
+</app-section-header>
+
+
+
+
+<div *ngIf="routes.length > 0; else empty">
+    <div *ngFor="let r of routes">
+        <app-route-list-item [route]="r"></app-route-list-item>
+    </div>
+</div>
+
+
+<ng-template #empty>
+    <div class="alert alert-warn">
+        <label class="mat-body-2 alert-text">No routes found</label>
+    </div>
+</ng-template>

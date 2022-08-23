@@ -1,0 +1,83 @@
+<app-section-header title="Photo Details"
+    [buttons]="buttons"
+    (event)="headerEvent($event)">
+</app-section-header>
+
+<div #photoContainer
+    class="photo-container"
+    [style.height.px]="heightScale">
+    <div class="photo photo-full"
+        [style.background]="'url(' + photo.base64 + ') no-repeat center center'"></div>
+    <div class="photo-name px-2 py-1"
+        *ngIf="editable">
+        <label class="mat-body-1">{{ photo.name }}</label>
+    </div>
+</div>
+
+
+<form [formGroup]="form">
+    <div class="mt-4"
+        *ngFor="let control of controls">
+        <app-form-field [field]="control"></app-form-field>
+    </div>
+</form>
+
+
+
+
+<div *ngIf="editable">
+
+
+
+    <hr class="mb-2">
+
+    <div *ngIf="!confirmDelete"
+        class="row justify-content-end align-items-center g-3">
+
+        <div class="col-auto">
+            <a mat-raised-button
+                color="warn"
+                (click)="deleteToggle()">
+                <label class="mat-button px-4 py-1">Delete</label>
+            </a>
+        </div>
+
+        <div class="col-auto">
+            <a mat-raised-button
+                color="accent"
+                (click)="save()"
+                [disabled]="form.pristine || form.invalid || form.disabled">
+                <label class="mat-button px-4 py-1">Save</label>
+            </a>
+        </div>
+    </div>
+
+
+    <div *ngIf="confirmDelete">
+
+
+        <div class="alert alert-warn">
+            <label class="mat-body-2 alert-text"> Are you sure you want to remove this photo?</label>
+        </div>
+
+
+        <div class="row justify-content-end align-items-center g-3">
+            <div class="col-auto">
+                <a mat-stroked-button
+                    color="primary"
+                    (click)="deleteToggle()">
+                    <label class="mat-button px-4 py-1">Cancel</label>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a mat-raised-button
+                    color="warn"
+                    (click)="delete()">
+                    <label class="mat-button px-4 py-1">Delete</label>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>

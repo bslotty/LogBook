@@ -1,0 +1,82 @@
+[
+    {
+        "id"     : 1,
+        "name"   : "Riffwire",
+        "address": "1 Calypso Place",
+        "city"   : "Des Moines",
+        "state"  : "IA",
+        "zip"    : "50362"
+    },
+    {
+        "id"     : 2,
+        "name"   : "Oyonder",
+        "address": "20 Del Sol Avenue",
+        "city"   : "Arlington",
+        "state"  : "VA",
+        "zip"    : "22234"
+    },
+    {
+        "id"     : 3,
+        "name"   : "Livetube",
+        "address": "50343 Petterle Drive",
+        "city"   : "Garden Grove",
+        "state"  : "CA",
+        "zip"    : "92844"
+    },
+    {
+        "id"     : 4,
+        "name"   : "Centidel",
+        "address": "624 Dawn Road",
+        "city"   : "Birmingham",
+        "state"  : "AL",
+        "zip"    : "35244"
+    },
+    {
+        "id"     : 5,
+        "name"   : "Oloo",
+        "address": "363 Green Pass",
+        "city"   : "Sacramento",
+        "state"  : "CA",
+        "zip"    : "94257"
+    },
+    {
+        "id"     : 6,
+        "name"   : "Jatri",
+        "address": "81559 Carioca Junction",
+        "city"   : "El Paso",
+        "state"  : "TX",
+        "zip"    : "88589"
+    },
+    {
+        "id"     : 7,
+        "name"   : "Agimba",
+        "address": "8949 Cambridge Court",
+        "city"   : "Saint Paul",
+        "state"  : "MN",
+        "zip"    : "55188"
+    },
+    {
+        "id"     : 8,
+        "name"   : "Midel",
+        "address": "96 Southridge Court",
+        "city"   : "Chicago",
+        "state"  : "IL",
+        "zip"    : "60614"
+    },
+    {
+        "id"     : 9,
+        "name"   : "InnoZ",
+        "address": "7765 Nobel Crossing",
+        "city"   : "Waltham",
+        "state"  : "MA",
+        "zip"    : "02453"
+    },
+    {
+        "id"     : 10,
+        "name"   : "Plajo",
+        "address": "2105 Hovde Point",
+        "city"   : "Jamaica",
+        "state"  : "NY",
+        "zip"    : "11436"
+    }
+]

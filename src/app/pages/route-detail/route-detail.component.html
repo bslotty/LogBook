@@ -1,0 +1,15 @@
+<app-section-header [title]="route.name" [buttons]="buttons" (event)="headerEvent($event)">
+</app-section-header>
+
+<div *ngIf="assets.length > 0; else empty">
+    <div *ngFor="let a of assets">
+        <app-asset-list-item [asset]="a"></app-asset-list-item>
+    </div>
+</div>
+
+
+<ng-template #empty>
+    <div class="alert alert-warn">
+        <label class="mat-body-2 alert-text">No assets found</label>
+    </div>
+</ng-template>
